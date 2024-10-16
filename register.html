@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <form action='register' method='POST'>
+        {% csrf_token %}
+        Enter name:<input type="text" name="NAME"><br>
+        Enter Password:<input type="password" name="PASSWORD1"><br>
+        Enter Confirm Password:<input type="password" name="PASSWORD2"><br>
+        <input type="submit">
+
+        
+    </form>
+    <div>
+        
+        <h3>
+            {% for message in messages %}
+            {{message}}
+            {% endfor %}
+        </h3>
+        
+    </div>
+    
+    
+</body>
+</html>
